@@ -23,18 +23,56 @@ body {
   }
   
   .form-row {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 20px;
+    margin-left: -130px;
   }
   
   .input-group {
-    display: flex;
     flex-direction: column;
+    margin-left: 60px;
   }
-  
+  #first-name{
+    display: flex;
+    margin-right: 650px;
+  }
+  #last-name{
+    display: flex;
+    margin-right: 650px;
+  }
+  #email{
+    display: flex;
+    margin-right: 650px;
+  }
+  #user-id{
+    display: flex;
+    margin-right: 650px;
+  }
+  #country2{
+    display: flex;
+    margin-right: 650px;
+  }
+  #state{
+    display: flex;
+    margin-right: 650px;
+  }
+  #city{
+    display: flex;
+    margin-right: 650px;
+  }
+  #phone{
+    display: flex;
+    margin-right: 650px;
+  }
+  #reference-code{
+    display: flex;
+    margin-right: 650px;
+  }
   label, input, select {
     margin-bottom: 10px;
+  }
+
+  .reference-code{
+    margin-left: 100px;
   }
   
   .buttons {
