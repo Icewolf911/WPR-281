@@ -26,45 +26,66 @@ body {
     margin-bottom: 20px;
     margin-left: -130px;
   }
-  
+  input{
+    border: none;
+    border-bottom: var(--bs-secondary) solid 1px;
+  }
+  select{
+    border: none;
+    border-bottom: var(--bs-secondary) solid 1px;
+  }
   .input-group {
     flex-direction: column;
     margin-left: 60px;
   }
   #first-name{
-    display: flex;
-    margin-right: 650px;
+   margin-right: 800px;
+  }
+  #lastname{
+    margin-right: 550px;
+    margin-top: -63px;
+    margin-left: 250px; 
   }
   #last-name{
-    display: flex;
-    margin-right: 650px;
+    margin-right: 550px;
+    margin-top: 1px;
+    margin-left: 250px;
+  }
+  #email2{
+    margin-left: -130px;
+    margin-top: 10px;
   }
   #email{
-    display: flex;
-    margin-right: 650px;
+    margin-right: 750px;
+    margin-left: -130px;
+    margin-bottom: 10px;
+  }
+  #userid{
+    margin-top: -71px;
+    margin-left: 120px;
   }
   #user-id{
-    display: flex;
     margin-right: 650px;
+    margin-left: 120px;
   }
-  #country2{
-    display: flex;
-    margin-right: 650px;
+  #Country2{
+    margin-left: -130px;
+    margin-top: 15px;
+  }
+  #country{
+    margin-right: 850px;
+    margin-left: -135px;
   }
   #state{
-    display: flex;
     margin-right: 650px;
   }
   #city{
-    display: flex;
     margin-right: 650px;
   }
   #phone{
-    display: flex;
     margin-right: 650px;
   }
   #reference-code{
-    display: flex;
     margin-right: 650px;
   }
   label, input, select {
