@@ -5,13 +5,11 @@ body {
   }
   
   .sidebar {
-    flex: 1;
     background-color: #2196F3;
-    min-width: 300px;
+    width: 120px;
   }
   
   .main-content {
-    flex: 3;
     padding: 20px;
   }
   
@@ -25,25 +23,60 @@ body {
   }
   
   .form-row {
-    display: flex;
-    justify-content: space-between;
     margin-bottom: 20px;
+    margin-left: -130px;
   }
   
   .input-group {
-    flex: 1;
-    display: flex;
     flex-direction: column;
+    margin-left: 60px;
   }
-  
+  #first-name{
+    display: flex;
+    margin-right: 650px;
+  }
+  #last-name{
+    display: flex;
+    margin-right: 650px;
+  }
+  #email{
+    display: flex;
+    margin-right: 650px;
+  }
+  #user-id{
+    display: flex;
+    margin-right: 650px;
+  }
+  #country2{
+    display: flex;
+    margin-right: 650px;
+  }
+  #state{
+    display: flex;
+    margin-right: 650px;
+  }
+  #city{
+    display: flex;
+    margin-right: 650px;
+  }
+  #phone{
+    display: flex;
+    margin-right: 650px;
+  }
+  #reference-code{
+    display: flex;
+    margin-right: 650px;
+  }
   label, input, select {
     margin-bottom: 10px;
   }
+
+  .reference-code{
+    margin-left: 100px;
+  }
   
   .buttons {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+    align-items: center; 
   }
   
   button {
@@ -51,16 +84,20 @@ body {
     margin-left: 10px;
     border: none;
     cursor: pointer;
+    
   }
   
   .reset-button {
     background-color: #FF5722;
-    color: white;
+    color: black;
+    
   }
   
   .continue-button {
-    background-color: #4CAF50;
+    background-color: #2196F3;
     color: white;
+    margin-left: 700px;
+    border-radius: 150px;
   }
 
   label{
