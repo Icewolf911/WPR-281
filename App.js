@@ -95,7 +95,7 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
 
   document.getElementById("email").addEventListener("blur", function() {
     globalPerson.email= document.getElementById("email").value
-    emailValid()});
+    emailValid(globalPerson.email)});
 
 
   document.getElementById("user-id").addEventListener("blur", function() {
