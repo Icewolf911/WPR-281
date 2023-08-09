@@ -7,7 +7,7 @@ https://www.figma.com/file/OUzLa4qzDuwTyp8NWQkZZB/Untitled?type=whiteboard&node-
 - [x] Person object(JJ)
 - [x] lettersOnly(Justin) 
 - [x] nubersOnly(Justin) 
-- [ ] emailValid 
+- [x] emailValid(Justin) 
 - [ ] randomRefrence 
 - [ ] checkCode
 - [ ] resefForm
