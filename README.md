@@ -3,7 +3,7 @@
 ## Design
 https://www.figma.com/file/OUzLa4qzDuwTyp8NWQkZZB/Untitled?type=whiteboard&node-id=0%3A1&t=6lAzR4TfgLrhNPc7-1
 
-- [x] Basic Layout(Conrad#)
+- [x] Basic Layout(Conrad)
 - [x] Person object(JJ)
 - [x] lettersOnly(Justin) 
 - [x] nubersOnly(Justin) 
