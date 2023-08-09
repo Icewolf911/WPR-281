@@ -14,3 +14,4 @@ https://www.figma.com/file/OUzLa4qzDuwTyp8NWQkZZB/Untitled?type=whiteboard&node-
 - [ ] formValid
 
 Justin: I have completed the lettersOnly and numbersOnly functions, I have kept the console.log() if you want to see how it gets the values (not important can remove if needed.)
+Side note: I think the globalPerson should be changed because all of them say: "globalPerson.**first-name**" meaning first-name has the value of email, last-name, ID and so on.
