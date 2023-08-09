@@ -11,7 +11,7 @@
 <body>
   <div class="sidebar"></div>
   <div class="main-content">
-    <h1>User Information Form</h1>
+    <h1 id="h1">Basic Details</h1>
     <form id="user-form1">
       <div class="form-row">
         <div class="input-group">
@@ -39,24 +39,28 @@
         <div class="input-group">
           <label for="country" id="Country2">Country</label>
           <select id="country" name="country">
+            <option value="Default">Default</option>
             <option value="usa">USA</option>
             <option value="canada">Canada</option>
-            <!-- Add more options as needed -->
+            <option value="sa">South-Africa</option>
           </select>
         </div>
         <div class="input-group">
           <label for="state" id="state2">State</label>
           <select id="state" name="state">
+            <option value="Default">Default</option>
             <option value="ny">New York</option>
             <option value="ca">California</option>
-            <!-- Add more options as needed -->
+            <option value="gp">Gauteng</option>
           </select>
           <div class="input-group">
-            <label for="city">City</label>
+            <label for="city" id="city2">City</label>
             <select id="city" name="city">
+              <option value="Default">Default</option>
               <option value="nyc">New York City</option>
               <option value="la">Los Angeles</option>
-              <!-- Add more options as needed -->
+              <option value="pta">Pretoria</option>
+
             </select>
           </div>
         </div>
@@ -64,19 +68,25 @@
       
       <div class="form-row4">
         <div class="input-group">
-          <label for="phone">Phone Number</label>
+          <label for="phone" id="phone2">Phone Number</label>
           <input type="tel" id="phone" name="phone" required>
         </div>
         <div class="input-group">
-          <label for="reference-code" >Reference Code</label>
+          <label for="reference-code" id="reference-code2">Reference Code</label>
           <input type="text" id="reference-code" name="reference-code" class="reference-code">
         </div>
       </div>
       
+
+
       <div class="form-row buttons">
-        <button type="button" class="btn btn-primary">Reset All</button>
+
+       <div class="form-row buttons">
+        <button type="button" class="btn btn-primary" id="reset">Reset All</button>
         <button type="submit" class="continue-button" id="continue-button">Continue</button>
+
       </div>
+     
     </form>
   </div>
 

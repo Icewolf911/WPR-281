@@ -13,7 +13,7 @@ body {
     padding: 20px;
   }
   
-  h1 {
+  .h1 {
     margin-bottom: 20px;
   }
   
@@ -76,17 +76,38 @@ body {
     margin-right: 850px;
     margin-left: -135px;
   }
+  #state2{
+    margin-top: -57px;
+  }
   #state{
-    margin-right: 650px;
+    margin-right: 695px;
+    margin-top: -1px;
+  }
+  #city2{
+    margin-top: -58px;
+    margin-left: 140px;
   }
   #city{
-    margin-right: 650px;
+    margin-right: 500px;
+    margin-left: 135px;
+  }
+  #phone2{
+    margin-top: 20px;
+    margin-left: -135px;
   }
   #phone{
-    margin-right: 650px;
+    margin-right: 750px;
+    margin-left: -135px;
+    margin-top: -5px;
+  }
+  #reference-code2{
+    margin-top: -56px;
+    margin-left: 120px;
   }
   #reference-code{
-    margin-right: 650px;
+    margin-right: 490px;
+    margin-top: -4px;
+    margin-left: 120px;
   }
   label, input, select {
     margin-bottom: 10px;
@@ -107,20 +128,19 @@ body {
     cursor: pointer;
     
   }
-  
-  .reset-button {
-    background-color: #FF5722;
-    color: black;
-    
+  #reset{
+    margin-left: 170px;
+    color: grey;
+    background-color: white;
+    border: none;
   }
-  
   .continue-button {
     background-color: #2196F3;
     color: white;
-    margin-left: 700px;
+    margin-left: 270px;
+    margin-top: 30px;
     border-radius: 150px;
   }
-
   label{
     color: var(--bs-secondary)!important;
   }
