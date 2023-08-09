@@ -20,32 +20,48 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
         }
     }
   }
+
   function numbersOnly(input) {   
     let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     let counter = 0;
     for(let i = 0; i < input.length; i++, counter++){
         //console.log(`${input[i]} is ${typeof(input[i])}`);
         if(alphabet.includes(input[i])){
-            alert(`${input} is an invalid number/digit field.`);
+            alert(`User ID has an invalid character.`);
             break;
         };    
     }
     if(counter > 13){
-        alert(`${input} has too many digits.`)
+        alert(`User ID has too many digits.`);
+    } else if(counter < 13){
+        alert(`User ID has too little digits.`);
     }
   }
+
   function emailValid(input) {
-    
+    if(input.includes('@')){
+        let [test, domain] = input.split('@');
+        if(test.length <= 3){
+            alert("Email must have more than 3 characters before '@' sign.");
+        }
+        if(!domain.includes('.')){
+            alert("Domain must contain a '.' character.");
+        }
+    }else(alert("Email must contain '@' character."));     
   }
+
   function randomRefrence(input) {
     
   }
+
   function checkCode(input) {
     
   }
+
   function resetForm(input) {
     
   }
+
   function formValid(input) {
     
   }
@@ -63,7 +79,7 @@ document.getElementById("last-name").addEventListener("blur", function() {
 
 document.getElementById("email").addEventListener("blur", function() {
     globalPerson.firstName= document.getElementById("email").value
-    emailValid()});
+    emailValid(globalPerson.firstName)});
 
 document.getElementById("user-id").addEventListener("blur", function() {
     globalPerson.firstName= document.getElementById("user-id").value;
