@@ -37,6 +37,9 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
         alert(`${input} has too many digits.`)
     }
   }
+  function noSpecialCharecters(input) {
+    
+  }
   function emailValid(input) {
     
   }
