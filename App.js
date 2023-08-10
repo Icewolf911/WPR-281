@@ -15,10 +15,10 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
 
   function lettersOnly(input) {
     let numbersArray = ['0','1','2','3','4','5','6','7','8','9'];
-    let specialArray = ['!','@','#','$','%','^','&','*','(',')','_','+','=','`','~',',','<','>','.','/','?','|']
+    let specialArray = ['!','@','#','$','%','^','&','*','(',')','_','+','=','`','~',',','<','>','.','/','?','|'];
     for(let i = 0; i < input.length; i++){
         //console.log(`${input[i]} is ${typeof(input[i])}`)
-        if(numbersArray.includes(input[i]) || specialArray.includes(input[i]) || noSpecialCharecters(input[i])){
+        if(numbersArray.includes(input[i]) || specialArray.includes(input[i])){
             alert(`${input} is an invalid text field.`);
             break;
         }
