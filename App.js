@@ -120,9 +120,11 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
   //the buttons have the "click" eventlistner since we want to check the form after
   //the button is clicked
   document.getElementById("continue-button").addEventListener("click", function() {
-    checkCode();});
+    checkCode();
+    displaySummary();
+  });
 
-  document.getElementById("continue-button").addEventListener("click", function() {
+  document.getElementById("reset").addEventListener("click", function() {
     resetForm();});
 
     function resetForm(){
@@ -134,7 +136,15 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
       document.getElementById("reference-code").value = '';
     } 
     // The function resetForm is created to clear all fields.
-
-    function Redisplay() {
-      window.location.href = "redisplay.html";
+    //const params = new URLSearchParams(window.location.search);
+    function displaySummary(){
+    document.getElementById("first-name").textContent = globalPerson.firstName;
+    document.getElementById("last-name").textContent = globalPerson.lastName;
+    document.getElementById("email").textContent = globalPerson.email;
+    document.getElementById("user-id").textContent = globalPerson.userID;
+    document.getElementById("country").textContent = globalPerson.country;
+    document.getElementById("state").textContent = globalPerson.state;
+    document.getElementById("phone").textContent = globalPerson.phone;
+    document.getElementById("reference-code").textContent = globalPerson.referenceCode;
     }
+    
