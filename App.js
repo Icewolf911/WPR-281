@@ -121,7 +121,6 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
   //the button is clicked
   document.getElementById("continue-button").addEventListener("click", function() {
     checkCode();
-    displaySummary();
   });
 
   document.getElementById("reset").addEventListener("click", function() {
