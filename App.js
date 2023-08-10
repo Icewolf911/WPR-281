@@ -14,44 +14,59 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
   }
 
   function lettersOnly(input) {
-    let numbersArray = ['0','1','2','3','4','5','6','7','8','9']
+    let numbersArray = ['0','1','2','3','4','5','6','7','8','9'];
+    let specialArray = ['!','@','#','$','%','^','&','*','(',')','_','+','=','`','~',',','<','>','.','/','?','|'];
     for(let i = 0; i < input.length; i++){
         //console.log(`${input[i]} is ${typeof(input[i])}`)
-        if(numbersArray.includes(input[i])){
-            alert(`${input} is an invalid text field.`);
+        if(numbersArray.includes(input[i]) || specialArray.includes(input[i])){
+            alert(`${input} is an invalid text field.`); 
             break;
         }
     }
   }
+
   function numbersOnly(input) {   
     let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let specialArray = ['!','@','#','$','%','^','&','*','(',')','_','+','=','`','~',',','<','>','.','/','?','|'];
     let counter = 0;
     for(let i = 0; i < input.length; i++, counter++){
         //console.log(`${input[i]} is ${typeof(input[i])}`);
-        if(alphabet.includes(input[i])){
-            alert(`${input} is an invalid number/digit field.`);
+        if(alphabet.includes(input[i]) || specialArray.includes(input[i])){
+            alert(`Phone number has an invalid character.`);
             break;
         };    
     }
-    if(counter > 13){
-        alert(`${input} has too many digits.`)
-    }
+
   }
+
   function noSpecialCharecters(input) {
     
   }
+
   function emailValid(input) {
-    
+    if(input.includes('@')){
+        let [test, domain] = input.split('@');
+        if(test.length <= 3){
+            alert("Email must have more than 3 characters before '@' sign.");
+        }
+        if(!domain.includes('.')){
+            alert("Domain must contain a '.' character.");
+        }
+    }else(alert("Email must contain '@' character."));     
   }
+
   function randomRefrence(input) {
     
   }
+
   function checkCode(input) {
     
   }
+
   function resetForm(input) {
     
   }
+
   function formValid(input) {
     
   }
@@ -69,7 +84,7 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
   //each text field has the "blur" listener since we want to check and add the values
   //after the person finished typing it in
   document.getElementById("first-name").addEventListener("blur", function() {
-    globalPerson.firstName= document.getElementById("first-name").value;
+    globalPerson.firstName= document.getElementById('first-name').value;
     lettersOnly(globalPerson.firstName)});
 
   document.getElementById("last-name").addEventListener("blur", function() {
@@ -78,7 +93,8 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
 
   document.getElementById("email").addEventListener("blur", function() {
     globalPerson.email= document.getElementById("email").value
-    emailValid()});
+    emailValid(globalPerson.email)});
+
 
   document.getElementById("user-id").addEventListener("blur", function() {
     globalPerson.userID= document.getElementById("user-id").value;});
@@ -94,7 +110,8 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
     globalPerson.city= document.getElementById("city").value});
 
   document.getElementById("phone").addEventListener("blur", function() {
-    globalPerson.phone= document.getElementById("phone").value});
+    globalPerson.phone= document.getElementById("phone").value
+    numbersOnly(globalPerson.phone)});
    
   document.getElementById("reference-code").addEventListener("blur", function() {
 
@@ -103,7 +120,31 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
   //the buttons have the "click" eventlistner since we want to check the form after
   //the button is clicked
   document.getElementById("continue-button").addEventListener("click", function() {
-    checkCode();});
+    checkCode();
+    displaySummary();
+  });
 
-  document.getElementById("continue-button").addEventListener("click", function() {
+  document.getElementById("reset").addEventListener("click", function() {
     resetForm();});
+
+    function resetForm(){
+      document.getElementById("first-name").value = '';
+      document.getElementById("last-name").value = '';
+      document.getElementById("email").value = '';
+      document.getElementById("user-id").value = '';
+      document.getElementById("phone").value = '';
+      document.getElementById("reference-code").value = '';
+    } 
+    // The function resetForm is created to clear all fields.
+    //const params = new URLSearchParams(window.location.search);
+    function displaySummary(){
+    document.getElementById("first-name").textContent = globalPerson.firstName;
+    document.getElementById("last-name").textContent = globalPerson.lastName;
+    document.getElementById("email").textContent = globalPerson.email;
+    document.getElementById("user-id").textContent = globalPerson.userID;
+    document.getElementById("country").textContent = globalPerson.country;
+    document.getElementById("state").textContent = globalPerson.state;
+    document.getElementById("phone").textContent = globalPerson.phone;
+    document.getElementById("reference-code").textContent = globalPerson.referenceCode;
+    }
+    
