@@ -126,3 +126,17 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
 
   document.getElementById("continue-button").addEventListener("click", function() {
     resetForm();});
+
+    function resetForm(){
+      document.getElementById("first-name").value = '';
+      document.getElementById("last-name").value = '';
+      document.getElementById("email").value = '';
+      document.getElementById("user-id").value = '';
+      document.getElementById("phone").value = '';
+      document.getElementById("reference-code").value = '';
+    } 
+    // The function resetForm is created to clear all fields.
+
+    function Redisplay() {
+      window.location.href = "redisplay.html";
+    }
