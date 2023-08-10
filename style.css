@@ -153,16 +153,16 @@ body {
   }
   
   .input-with-icon {
-    padding-right: 30px; /* Adjust this value to provide enough space for the icon */
+    padding-right: 30px; 
   }
   
   .icon {
     position: absolute;
     top: 15px;
-    left: 60px; /* Adjust this value to position the icon as needed */
+    left: 60px;
     transform: translateY(-50%);
-    fill: forestgreen; /* Color of the SVG icon */
-    pointer-events: none; /* Ensure the icon doesn't interfere with input interaction */
+    fill: forestgreen;
+    pointer-events: none; 
   }
   .input-wrapper2 {
     position: relative;
@@ -170,15 +170,15 @@ body {
   }
   
   .input-with-icon2 {
-    padding-right: 30px; /* Adjust this value to provide enough space for the icon */
+    padding-right: 30px; 
   }
   
   .icon2 {
     position: absolute;
     top: 15px;
-    left: 310px; /* Adjust this value to position the icon as needed */
+    left: 310px; 
     transform: translateY(-50%);
-    fill: grey; /* Color of the SVG icon */
-    pointer-events: none; /* Ensure the icon doesn't interfere with input interaction */
+    fill: grey; 
+    pointer-events: none; 
   }
   
