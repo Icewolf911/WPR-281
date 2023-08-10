@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <!-- <link rel="stylesheet" href="Index.html"> -->
+  <title>Redisplay</title>
+</head>
+<body>
+  <div class="sidebar"></div>
+  <div class="main-content">
+    <h1>Redisplay Information</h1>
+    <div>
+      <p>First Name: <span id="first-name"></span></p>
+      <p>Last Name: <span id="last-name"></span></p>
+      <p>Email ID: <span id="email"></span></p>
+      <p>User ID: <span id="user-id"></span></p>
+      <p>Country: <span id="country"></span></p>
+      <p>State: <span id="state"></span></p>
+      <p>City: <span id="city"></span></p>
+      <p>Phone Number: <span id="phone"></span></p>
+      <p>Reference Code: <span id="reference-code"></span></p>
+    </div>
+  </div>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    document.getElementById("first-name").textContent = params.get("first-name");
+    document.getElementById("last-name").textContent = params.get("last-name");
+    document.getElementById("email").textContent = params.get("email");
+    document.getElementById("user-id").textContent = params.get("user-id");
+    document.getElementById("country").textContent = params.get("country");
+    document.getElementById("state").textContent = params.get("state");
+    document.getElementById("city").textContent = params.get("city");
+    document.getElementById("phone").textContent = params.get("phone");
+    document.getElementById("reference-code").textContent = params.get("reference-code");
+  </script>
+</body>
+</html>
