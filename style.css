@@ -137,7 +137,7 @@ body {
     background-color: white;
     border: none;
   }
-  .continue-button {
+  #continue-button {
     background-color: #2196F3;
     color: white;
     margin-left: 270px;
