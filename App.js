@@ -19,7 +19,7 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
     for(let i = 0; i < input.length; i++){
         //console.log(`${input[i]} is ${typeof(input[i])}`)
         if(numbersArray.includes(input[i]) || specialArray.includes(input[i])){
-            alert(`${input} is an invalid text field.`);
+            alert(`${input} is an invalid text field.`); 
             break;
         }
     }
@@ -27,19 +27,16 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
 
   function numbersOnly(input) {   
     let alphabet = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    let specialArray = ['!','@','#','$','%','^','&','*','(',')','_','+','=','`','~',',','<','>','.','/','?','|'];
     let counter = 0;
     for(let i = 0; i < input.length; i++, counter++){
         //console.log(`${input[i]} is ${typeof(input[i])}`);
-        if(alphabet.includes(input[i])){
-            alert(`User ID has an invalid character.`);
+        if(alphabet.includes(input[i]) || specialArray.includes(input[i])){
+            alert(`Phone number has an invalid character.`);
             break;
         };    
     }
-    if(counter > 13){
-        alert(`User ID has too many digits.`);
-    } else if(counter < 13){
-        alert(`User ID has too little digits.`);
-    }
+
   }
 
   function noSpecialCharecters(input) {
@@ -87,7 +84,7 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
   //each text field has the "blur" listener since we want to check and add the values
   //after the person finished typing it in
   document.getElementById("first-name").addEventListener("blur", function() {
-    globalPerson.firstName= document.getElementById("first-name").value;
+    globalPerson.firstName= document.getElementById('first-name').value;
     lettersOnly(globalPerson.firstName)});
 
   document.getElementById("last-name").addEventListener("blur", function() {
@@ -113,7 +110,8 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
     globalPerson.city= document.getElementById("city").value});
 
   document.getElementById("phone").addEventListener("blur", function() {
-    globalPerson.phone= document.getElementById("phone").value});
+    globalPerson.phone= document.getElementById("phone").value
+    numbersOnly(globalPerson.phone)});
    
   document.getElementById("reference-code").addEventListener("blur", function() {
 
