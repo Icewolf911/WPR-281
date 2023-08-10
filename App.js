@@ -138,13 +138,15 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
     // The function resetForm is created to clear all fields.
     //const params = new URLSearchParams(window.location.search);
     function displaySummary(){
-    document.getElementById("first-name").textContent = globalPerson.firstName;
-    document.getElementById("last-name").textContent = globalPerson.lastName;
-    document.getElementById("email").textContent = globalPerson.email;
-    document.getElementById("user-id").textContent = globalPerson.userID;
-    document.getElementById("country").textContent = globalPerson.country;
-    document.getElementById("state").textContent = globalPerson.state;
-    document.getElementById("phone").textContent = globalPerson.phone;
-    document.getElementById("reference-code").textContent = globalPerson.referenceCode;
+      const params = new URLSearchParams(window.location.search);
+      document.getElementById("first-name").textContent = params.get('first-name');
+      document.getElementById("last-name").textContent = params.get('last-name');
+      document.getElementById("email").textContent = params.get('email');
+      document.getElementById("user-id").textContent = params.get('user-id');
+      document.getElementById("country").textContent = params.get('country');
+      document.getElementById("city").textContent = params.get('city');
+      document.getElementById("state").textContent = params.get('state');
+      document.getElementById("phone").textContent = params.get('phone');
+      document.getElementById("reference-code").textContent = params.get('reference-code');
     }
     
