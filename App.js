@@ -59,13 +59,42 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
     return true;
   }
 
-  function randomRefrence(input) {
+  document.addEventListener("DOMContentLoaded", function() {
+    // Automatically generate a random reference code on page load
+    const randomReference = generateRandomReference(10);
+    document.getElementById("reference-code").value = randomReference;
+  
     
+  
+      // Get the user-entered reference code
+      const userReferenceCode = document.getElementById("reference-code").value;
+  
+      // Check if the user's reference code matches the generated reference
+      if (userReferenceCode === randomReference) {
+        // Reference code is valid
+        console.log("Reference code is valid!");
+        // Perform any actions you want for a valid reference code here
+      } else {
+        // Reference code is invalid
+        console.log("Invalid reference code. Please try again.");
+        // Perform any actions you want for an invalid reference code here
+      }
+    });
+  ;
+  
+  // Function to generate a random reference code
+  function generateRandomReference(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let reference = '';
+  
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      reference += characters.charAt(randomIndex);
+    }
+  
+    return reference;
   }
-
-  function checkCode(input) {
-    return true;
-  }
+  
 
 
   let firstNameValid=false;
