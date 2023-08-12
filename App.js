@@ -107,8 +107,7 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
     if (firstNameValid&&
       lastNameValid&&
       emailIDValid&&
-      phoneValid&&
-      refrenceCodeValid) {
+      phoneValid) {
 
       return true;
     }
@@ -275,14 +274,6 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
 
     randomRefrence();
 
-    if(checkCode(globalPerson.referenceCode)){
-      firstNameValid=true;
-      document.getElementById("reference-code").classList.remove("border-danger", "border-top");
-    }else{
-      firstNameValid=false;
-      document.getElementById("reference-code").classList.add("border-danger", "border-top");
-    }
-
     if (formValid) {
       document.getElementById("continue-button").removeAttribute('disabled');
     }else{
@@ -327,11 +318,6 @@ function Person(firstName, lastName, email, userID, country, state, city, phone,
     document.getElementById("reference-code").classList.add("border-primary");
   });
 
-  //the buttons have the "click" eventlistner since we want to check the form after
-  //the button is clicked
-  document.getElementById("continue-button").addEventListener("click", function() {
-    checkCode();
-  });
 
   document.getElementById("reset").addEventListener("click", function() {
     resetForm();});
