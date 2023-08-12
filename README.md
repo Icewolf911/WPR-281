@@ -8,12 +8,12 @@ https://www.figma.com/file/OUzLa4qzDuwTyp8NWQkZZB/Untitled?type=whiteboard&node-
 - [x] lettersOnly(Justin) 
 - [x] nubersOnly(Justin) 
 - [x] emailValid(Justin) 
-- [ ] randomRefrence 
-- [ ] checkCode
+- [ ] randomRefrence(Dylan#) 
+- [ ] checkCode(Dylan#)
 - [x] resefForm(Conrad)
 - [ ] formValid
-- [ ] noSpecialCharceters (Justin - Added this to lettersOnly function)
-- [ ] Redisplay Info(Conrad#&JJ#)
+- [x] noSpecialCharceters (Justin - Added this to lettersOnly function)
+- [x] Redisplay Info(Conrad&JJ)
 
 Justin: Instead of adding a new function to test specifically for special characters, I just applied the same method for numbers in the lettersOnly function but for special characters. If you prefer to do a separate function, all you have to do is copy the specialArray and loops from lettersOnly and put them in the specialCharacter function.
 One more thing, I kept the '-' sign as some people's names have that in.
