@@ -181,4 +181,7 @@ body {
     fill: grey; 
     pointer-events: none; 
   }
+.test{
+  color: #2196F3!important;
+}
   

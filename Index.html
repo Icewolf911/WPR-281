@@ -14,8 +14,8 @@
     <form id="user-form1" action="ReDisplay.html" method="get">
       <div class="form-row">
         <div class="input-group">
-          <label for="first-name">First Name:</label>
-          <input type="text" id="first-name" name="first-name" required>
+          <label for="first-name" id="first-name-label">First Name:</label>
+          <input type="text" id="first-name" name="first-name" class="" required>
         </div>
         <div class="input-group">
           <label for="last-name" id="lastname">Last Name:</label>
@@ -28,7 +28,7 @@
           <label for="email" id="email2">Email ID</label>
           <div class="input-wrapper">
             <input type="email" id="email" class="input-with-icon" placeholder="" name="email" required>
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 icon" viewBox="0 0 16 16">
+            <svg id="check-mark" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check2 icon" viewBox="0 0 16 16" hidden>
               <path d="M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z"/>
             </svg>
           </div>
@@ -96,7 +96,7 @@
        <div class="form-row buttons">
        <div class="form-row buttons">
         <button type="reset" class="btn btn-primary" onclick="resetForm()" id="reset">Reset All</button>
-        <button type="submit" class="disabled" id="continue-button">Continue</button>
+        <button type="submit" class="disabled" id="continue-button" disabled>Continue</button>
       </div>
     </form>
   </div>

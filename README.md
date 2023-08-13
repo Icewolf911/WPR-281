@@ -8,10 +8,9 @@ https://www.figma.com/file/OUzLa4qzDuwTyp8NWQkZZB/Untitled?type=whiteboard&node-
 - [x] lettersOnly(Justin) 
 - [x] nubersOnly(Justin) 
 - [x] emailValid(Justin) 
-- [ ] randomRefrence(Dylan#) 
-- [ ] checkCode(Dylan#)
+- [x] randomRefrence(Dylan) 
 - [x] resefForm(Conrad)
-- [ ] formValid
+- [x] formValid(JJ)
 - [x] noSpecialCharceters (Justin - Added this to lettersOnly function)
 - [x] Redisplay Info(Conrad&JJ)
 
